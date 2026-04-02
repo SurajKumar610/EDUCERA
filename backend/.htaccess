@@ -1,0 +1,7 @@
+# EDUCERA Backend - .htaccess
+RewriteEngine On
+
+# Let PHP handle everything (including OPTIONS preflight)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
